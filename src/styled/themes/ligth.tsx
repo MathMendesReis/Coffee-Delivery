@@ -50,7 +50,7 @@ export const theme: DefaultTheme = {
     xl: rem(20),
     '2xl': rem(24),
     '3xl': rem(32),
-    '4xl': rem(40),
+    '4xl': rem(48),
     '5xl': rem(64),
   },
 }

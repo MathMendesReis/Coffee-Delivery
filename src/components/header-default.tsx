@@ -59,5 +59,5 @@ const MapPinStyled = styled(MapPin)`
 const ShoppingCartStyled = styled(ShoppingCart)`
   width: 1.375rem;
   height: 1.375rem;
-  color:${({theme})=>theme.colors.purpleDark};
+  color:${({theme})=>theme.colors.yellowDark};
 `

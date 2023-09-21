@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-type fontSize = '4xl'|'3xl'
+type fontSize = '4xl'|'3xl'|'xl'
 export default function Title(
   {
     text='insira um title', 

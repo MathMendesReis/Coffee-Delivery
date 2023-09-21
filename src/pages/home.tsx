@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Title from '../components/default-title'
 import ListIconWithInfo from '../components/list-icon-with-info'
 import Image from '../assets/Imagem.svg'
+import CoffeeCatalog from '../components/coffee-catalog'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         </ContainerText>
         <img src={Image} alt="" />
       </Banner>
+      <CoffeeCatalog/>
     </Container>
   )
 }
@@ -44,8 +46,12 @@ width: 100%;
 `
 const Banner = styled.section`
 width: 100%;
-height: 34rem;
+min-height: 34rem;
 display: flex;
 align-items:center;
 justify-content: space-between;
+flex-wrap: wrap;
+@media (max-width: 1150px) {
+  justify-content: center;
+}
 `

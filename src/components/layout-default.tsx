@@ -7,5 +7,5 @@ align-items: center;
 justify-content: flex-start;
 min-height: 100vh;
 width: 100%;
-padding: 0 160px;
+padding: 0 240px;
 `

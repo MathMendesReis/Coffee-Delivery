@@ -1,3 +1,5 @@
+import { LayoutDefault } from "../components/layout-default";
+
 export default function Home() {
-  return <div></div>
+  return <LayoutDefault></LayoutDefault>
 }

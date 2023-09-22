@@ -5,7 +5,9 @@ import Image from '../assets/Imagem.svg'
 import CoffeeCatalog from '../components/coffee-catalog'
 
 export default function Home() {
+
   return (
+
     <Container>
       <Banner>
         <ContainerText>

@@ -18,6 +18,7 @@ export default function InputQuantity({item}:{item:Coffees}) {
   return (
     <Container>
       <ButtonPlus
+      type='button'
       onClick={handleAddProdIncart}
       
       >
@@ -25,6 +26,7 @@ export default function InputQuantity({item}:{item:Coffees}) {
       </ButtonPlus>
       <Span>{quantity}</Span>
       <ButtonMinus
+      type='button'
       onClick={handleRmvProdIncart}
       >
         <Minus weight='bold'/>

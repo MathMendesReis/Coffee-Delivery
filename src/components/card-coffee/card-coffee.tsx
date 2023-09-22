@@ -10,7 +10,12 @@ import { Coffees } from '../../types/coffees'
 export default function CardCoffee({item}:{item:Coffees}) {
   return(
     <ContainerCard>
-      <ImageCoffee imgUrl={item.imageUrl}/>
+      <ImageCoffee 
+      imgUrl={item.imageUrl} 
+      widthImg='7.5'
+      heigthImg='7.5'
+      isMarginTop={true}
+      />
       <ContainerCategory>
         <ListCategory item={item}/>
       </ContainerCategory>

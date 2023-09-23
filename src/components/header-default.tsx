@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import Logo from '../assets/react.svg'
 import { MapPin,ShoppingCart } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+
 
 
 export default function HeaderDefault() {
+  const navigate = useNavigate()
+ const handlePageCart = () => {
+  navigate('/checkout');
+ }
   return ( 
     <NavBar>
       <LinkHomePag to='/'>
@@ -14,11 +19,9 @@ export default function HeaderDefault() {
         <MapPinStyled /> 
         <span>São Pedro da Aldeia - RJ</span>
         </ButtonMapPin>
-        <Link to='checkout'>
-          <ButtonCartShopping>
+          <ButtonCartShopping onClick={handlePageCart}>
             <ShoppingCartStyled />
           </ButtonCartShopping>
-        </Link>
     </NavBar>
   )
 }
@@ -67,5 +70,4 @@ const ShoppingCartStyled = styled(ShoppingCart)`
 `
 const LinkHomePag = styled(Link)`
   margin-right: auto;
-
 `

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { PaymentMethods, ValidationSchemma } from "./form/validation";
 
 export default function PaymentMethodsTSX() {
-  const {register, formState:{errors}, setValue} = useFormContext<ValidationSchemma>()
+  const { setValue} = useFormContext<ValidationSchemma>()
 
   const handlePaymentMethodChange = (paymentMethod:PaymentMethods) => {
     setValue("paymentMethod", paymentMethod);

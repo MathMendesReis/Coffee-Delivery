@@ -9,7 +9,7 @@ export const validationSchemma = z.object({
   cep: z.string().min(1, 'Informe o CEP'),
   street: z.string().min(1, 'Informe o Rua'),
   number: z.string().min(1, 'Informe o Número'),
-  complement: z.string(),
+  complement: z.string().optional(),
   district: z.string().min(1, 'Informe o Bairro'),
   city: z.string().min(1, 'Informe a Cidade'),
   uf: z.string().min(1, 'Informe a UF'),

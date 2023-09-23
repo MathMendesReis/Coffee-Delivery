@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ValidationSchemma } from './form/validation'
 
 export default function Inputs(){
-  const {register, formState:{errors}} = useFormContext<ValidationSchemma>()
+  const {register} = useFormContext<ValidationSchemma>()
 
   return(
     <ContainerInputs>

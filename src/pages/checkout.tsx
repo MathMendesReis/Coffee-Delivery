@@ -9,13 +9,23 @@ import BtnPayment from "../components/checkoutPage/button-confirmed-payment";
 import { BaseLayout } from "../components/checkoutPage/base-layout";
 import useCart from "../hooks/useCart";
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useNavigate } from "react-router-dom";
+
 
 
 export default function Checkout() {
   const methods = useForm<ValidationSchemma>({
     resolver: zodResolver(validationSchemma),
-  })  
-  const onSubmit = (data:ValidationSchemma) => console.log(data)
+  })
+  const navigate = useNavigate();
+  
+  const onSubmit = (data:ValidationSchemma) => {
+    console.log(methods.formState.isValid)
+    console.log(data)
+    console.log(methods.formState.errors)
+    if (methods.formState.isValid) {
+      navigate('/sucess', { state: { data } });
+    }  }
   const { stateCart } = useCart()
 
   return (

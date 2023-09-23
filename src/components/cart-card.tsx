@@ -12,7 +12,7 @@ export default function CartCard({ coffee }: { coffee: Coffees }) {
         <span>{coffee.name}</span>
         <ContainerBtnRemoveWithInput>
           <InputQuantity item={coffee} />
-          <ButtonRemove />
+          <ButtonRemove item={coffee} />
         </ContainerBtnRemoveWithInput>
       </ContainerBtnRemoveWithInputAndName>
       <PriceCofee />

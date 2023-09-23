@@ -1,27 +1,66 @@
-# React + TypeScript + Vite
+# README - Coffee Delivery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o README do projeto Coffee Delivery, um aplicativo web desenvolvido utilizando React.js e Vite. Neste documento, descreveremos as tecnologias utilizadas, os objetivos do projeto e as principais funcionalidades implementadas.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto Coffee Delivery utiliza as seguintes tecnologias:
 
-## Expanding the ESLint configuration
+- **React.js**: Uma biblioteca JavaScript popular para a construção de interfaces de usuário interativas e reativas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Styled Components**: Uma biblioteca de estilização em JavaScript que permite a criação de componentes estilizados de forma dinâmica.
 
-- Configure the top-level `parserOptions` property like this:
+- **React Hook Form**: Uma biblioteca que facilita a criação e validação de formulários em React, utilizada para monitorar o formulário de checkout.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Objetivo do Projeto
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+O objetivo principal deste projeto é criar um e-commerce de cafés, oferecendo aos usuários a possibilidade de navegar por uma seleção de produtos, adicioná-los e removê-los do carrinho e, por fim, realizar o checkout preenchendo um formulário de endereço.
+
+## Funcionalidades Principais
+
+O projeto Café E-commerce possui as seguintes funcionalidades:
+
+1. **Página Inicial (Home)**:
+   - Exibe uma lista de cafés disponíveis para compra.
+   - Permite que os usuários adicionem produtos ao carrinho.
+   - Cada produto exibe seu nome, preço e uma imagem representativa.
+
+2. **Página de Checkout**:
+   - Contém um formulário de preenchimento de endereço.
+   - Ao lado do formulário, exibe o carrinho de compras, onde os usuários podem:
+     - Ver os produtos selecionados.
+     - Remover produtos do carrinho.
+     - Aumentar ou diminuir a quantidade de produtos.
+   - Ao preencher o formulário e clicar em "Finalizar Compra", o usuário conclui o processo de checkout.
+
+3. **React Hook Form**:
+   - Utilizado para monitorar e validar o formulário de checkout.
+   - Garante que os dados de endereço sejam preenchidos corretamente antes da finalização da compra.
+
+## Como Executar o Projeto
+
+Para executar o projeto em sua máquina local, siga estas etapas:
+
+1. Certifique-se de ter o Node.js instalado em seu sistema.
+
+2. Clone este repositório para sua máquina:
+
+   ```
+   git clone https://github.com/seu-usuario/cafe-e-commerce.git
+Navegue até o diretório do projeto:
+
+   ```
+Copy code
+cd cafe-e-commerce
+Instale as dependências utilizando o npm ou yarn:
+
+shell
+Copy code
+npm install
+# ou
+yarn install
+Inicie o servidor de desenvolvimento:
+npm run dev
+# ou
+yarn dev
+   ```

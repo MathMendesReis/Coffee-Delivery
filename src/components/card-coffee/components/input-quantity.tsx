@@ -4,7 +4,7 @@ import { Coffees } from '../../../types/coffees'
 import useCart from '../../../hooks/useCart'
 import {
   addProdInCart,
-  removeProdCart,
+  quantityProdCart,
 } from '../../../context/cart-context/cart-reducer'
 import { MouseEventHandler } from 'react'
 
@@ -21,7 +21,7 @@ export default function InputQuantity({ item }: { item: Coffees }) {
   const handleRmvProdIncart:
     | MouseEventHandler<HTMLButtonElement>
     | undefined = () => {
-    removeProdCart(item, dispatch)
+    quantityProdCart(item, dispatch)
   }
   return (
     <Container>

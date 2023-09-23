@@ -38,6 +38,9 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+    &:active {
+    transform: scale(0.8);
+  }
   }
 
   ul,

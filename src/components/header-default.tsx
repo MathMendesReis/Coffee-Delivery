@@ -2,12 +2,14 @@ import styled from 'styled-components'
 import Logo from '../assets/react.svg'
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
 import { Link, useNavigate } from 'react-router-dom'
+import useCart from '../hooks/useCart'
 
 export default function HeaderDefault() {
   const navigate = useNavigate()
   const handlePageCart = () => {
     navigate('/checkout')
   }
+  const { stateCart } = useCart()
   return (
     <NavBar>
       <LinkHomePag to="/">
@@ -20,10 +22,30 @@ export default function HeaderDefault() {
       <ButtonCartShopping onClick={handlePageCart}>
         <ShoppingCartStyled />
       </ButtonCartShopping>
+      <LengthCart>
+        <span>{stateCart.itemCounter}</span>
+      </LengthCart>
     </NavBar>
   )
 }
-
+const LengthCart = styled.div`
+  background-color: ${({ theme }) => theme.colors.yellowDark};
+  width: 1.5625rem;
+  height: 1.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  margin-left: -20px;
+  &:active {
+    transform: scale(0.8);
+  }
+  span {
+    color: ${({ theme }) => theme.colors.white};
+    font-weight: 800;
+    font-size: 0.875rem;
+  }
+`
 const NavBar = styled.header`
   min-height: 6.5rem;
   width: 100%;

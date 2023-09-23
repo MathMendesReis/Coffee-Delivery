@@ -1,7 +1,12 @@
 /* eslint-disable no-case-declarations */
 import { Dispatch } from 'react'
 import { Coffees } from '../../types/coffees'
-import { ActionsType, addNewProdAction, removeProdAction } from './actions'
+import {
+  ActionsType,
+  addNewProdAction,
+  quantityProdAction,
+  removeProdAction,
+} from './actions'
 import { Action, CartItem, InitialState } from './cart'
 
 export const cartReducer = (state: InitialState, action: Action) => {
@@ -31,7 +36,7 @@ export const cartReducer = (state: InitialState, action: Action) => {
           total,
         }
       }
-    case ActionsType.REMOVE_PROD:
+    case ActionsType.QUANTITY:
       if (isExisting && isExisting.quantity === 1) {
         const updatedCartItems = state.cartItems.filter(
           (item) => item.id !== isExisting.id,
@@ -55,6 +60,18 @@ export const cartReducer = (state: InitialState, action: Action) => {
           total,
         }
       }
+    case ActionsType.REMOVE_PROD:
+      const updateCartFilter = state.cartItems.filter(
+        (item) => item.id !== action.payload.id,
+      )
+      const total = calculateTotal(updateCartFilter)
+      return {
+        ...state,
+        cartItems: updateCartFilter,
+        itemCounter: updateCartFilter.length,
+        total,
+      }
+
     default:
       return state
   }
@@ -78,7 +95,10 @@ export function prodInCart({ cartItems }: InitialState, id: string) {
   return found
 }
 
-export function removeProdCart(item: Coffees, dispacth: Dispatch<Action>) {
+export function quantityProdCart(item: Coffees, dispacth: Dispatch<Action>) {
+  dispacth(quantityProdAction(item))
+}
+export function removeAllProds(item: Coffees, dispacth: Dispatch<Action>) {
   dispacth(removeProdAction(item))
 }
 

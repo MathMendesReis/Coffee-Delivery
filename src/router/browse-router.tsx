@@ -1,26 +1,26 @@
-import { createBrowserRouter } from "react-router-dom";
-import DefaultPage from "../pages/default-page";
-import Home from "../pages/home";
-import Checkout from "../pages/checkout";
-import Sucess from "../pages/sucess";
+import { createBrowserRouter } from 'react-router-dom'
+import DefaultPage from '../pages/default-page'
+import Home from '../pages/home'
+import Checkout from '../pages/checkout'
+import Sucess from '../pages/sucess'
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <DefaultPage />,
     children: [
       {
-        path: "", 
+        path: '',
         element: <Home />,
       },
       {
-        path: "checkout", 
+        path: 'checkout',
         element: <Checkout />,
       },
       {
-        path: "sucess", 
+        path: 'sucess',
         element: <Sucess />,
       },
     ],
   },
-]);
+])

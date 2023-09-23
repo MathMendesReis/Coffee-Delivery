@@ -1,29 +1,29 @@
 import styled from 'styled-components'
 import IconWithIcon from './icon-with-info'
-import { ShoppingCart } from "@phosphor-icons/react";
+import { ShoppingCart } from '@phosphor-icons/react'
 
 export default function ListIconWithInfo() {
-  return(
+  return (
     <ContainerInfoWithIcon>
       <IconWithIcon
-      text='Compras simples e seguras'
-      icon={<ShoppingCart/>}
-      colorBg='yellowDark'
+        text="Compras simples e seguras"
+        icon={<ShoppingCart />}
+        colorBg="yellowDark"
       />
       <IconWithIcon
-      text='Embalagem mantem o café intacto'
-      icon={<ShoppingCart/>}
-      colorBg='baseText'
+        text="Embalagem mantem o café intacto"
+        icon={<ShoppingCart />}
+        colorBg="baseText"
       />
       <IconWithIcon
-      text='Entrega rapida e rastreada'
-      icon={<ShoppingCart/>}
-      colorBg='yellow'
+        text="Entrega rapida e rastreada"
+        icon={<ShoppingCart />}
+        colorBg="yellow"
       />
       <IconWithIcon
-      text='O café chega fresquinho até você'
-      icon={<ShoppingCart/>}
-      colorBg='purpleDark'
+        text="O café chega fresquinho até você"
+        icon={<ShoppingCart />}
+        colorBg="purpleDark"
       />
     </ContainerInfoWithIcon>
   )

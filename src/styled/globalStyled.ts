@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   select,
   textarea,
   button {
-    font: 400 1rem  ${({theme})=>theme.fontFamily.roboto};
+    font: 400 1rem  ${({ theme }) => theme.fontFamily.roboto};
   }
 
   a {

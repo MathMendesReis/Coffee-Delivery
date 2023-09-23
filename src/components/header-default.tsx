@@ -1,27 +1,25 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import Logo from '../assets/react.svg'
-import { MapPin,ShoppingCart } from "@phosphor-icons/react";
-import { Link,useNavigate } from "react-router-dom";
-
-
+import { MapPin, ShoppingCart } from '@phosphor-icons/react'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function HeaderDefault() {
   const navigate = useNavigate()
- const handlePageCart = () => {
-  navigate('/checkout');
- }
-  return ( 
+  const handlePageCart = () => {
+    navigate('/checkout')
+  }
+  return (
     <NavBar>
-      <LinkHomePag to='/'>
+      <LinkHomePag to="/">
         <LogoStyled src={Logo} alt="" />
       </LinkHomePag>
       <ButtonMapPin>
-        <MapPinStyled /> 
+        <MapPinStyled />
         <span>São Pedro da Aldeia - RJ</span>
-        </ButtonMapPin>
-          <ButtonCartShopping onClick={handlePageCart}>
-            <ShoppingCartStyled />
-          </ButtonCartShopping>
+      </ButtonMapPin>
+      <ButtonCartShopping onClick={handlePageCart}>
+        <ShoppingCartStyled />
+      </ButtonCartShopping>
     </NavBar>
   )
 }
@@ -45,28 +43,28 @@ const BaseButton = styled.button`
   border: none;
 `
 const ButtonMapPin = styled(BaseButton)`
-span{
-  font-size: 0.875rem;
-  color: ${({theme})=>theme.colors.purpleDark};
-}
+  span {
+    font-size: 0.875rem;
+    color: ${({ theme }) => theme.colors.purpleDark};
+  }
 `
 const ButtonCartShopping = styled(BaseButton)``
 
 const LogoStyled = styled.img`
-width: 84.952px;
-height: 40px;
-flex-shrink: 0;
+  width: 84.952px;
+  height: 40px;
+  flex-shrink: 0;
 `
 
 const MapPinStyled = styled(MapPin)`
   width: 1.375rem;
   height: 1.375rem;
-  color:${({theme})=>theme.colors.purpleDark};
+  color: ${({ theme }) => theme.colors.purpleDark};
 `
 const ShoppingCartStyled = styled(ShoppingCart)`
   width: 1.375rem;
   height: 1.375rem;
-  color:${({theme})=>theme.colors.yellowDark};
+  color: ${({ theme }) => theme.colors.yellowDark};
 `
 const LinkHomePag = styled(Link)`
   margin-right: auto;

@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export default function CartList() {
-  return(
+  return (
     <SubContainerCartList>
-    <CartList/>
-  </SubContainerCartList>
+      <CartList />
+    </SubContainerCartList>
   )
 }
 const SubContainerCartList = styled.div`

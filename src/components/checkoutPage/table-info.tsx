@@ -1,26 +1,25 @@
-import useCart from "../../hooks/useCart";
-import { formatPrice } from "../../utils/format-price";
+import useCart from '../../hooks/useCart'
+import { formatPrice } from '../../utils/format-price'
 import styled from 'styled-components'
 
-
 export default function TableWithInfo() {
-  const {stateCart} = useCart()
+  const { stateCart } = useCart()
 
-  return(
+  return (
     <ContainerTable>
-            <tr>
-              <td>Total items</td>
-              <td>{formatPrice(stateCart.total)}</td>
-            </tr>
-            <tr>
-              <td>Entrega</td>
-              <td>{formatPrice(350)}</td>
-            </tr>
-            <tr>
-              <td>Total</td>
-              <td>{formatPrice(stateCart.total + 350)}</td>
-            </tr>
-        </ContainerTable>
+      <tr>
+        <td>Total items</td>
+        <td>{formatPrice(stateCart.total)}</td>
+      </tr>
+      <tr>
+        <td>Entrega</td>
+        <td>{formatPrice(350)}</td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td>{formatPrice(stateCart.total + 350)}</td>
+      </tr>
+    </ContainerTable>
   )
 }
 
@@ -37,7 +36,7 @@ const ContainerTable = styled.table`
 
     td {
       width: 80px;
-      color: var(--base-text, #574F4D);
+      color: var(--base-text, #574f4d);
       font-family: Roboto;
       font-size: 0.875rem;
       font-style: normal;
@@ -51,4 +50,4 @@ const ContainerTable = styled.table`
       }
     }
   }
-`;
+`

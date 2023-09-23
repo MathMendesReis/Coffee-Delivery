@@ -30,8 +30,8 @@ declare module 'styled-components' {
       mobile: string
     }
     fontFamily: {
-      roboto:string
-      bold2:string
+      roboto: string
+      bold2: string
       heading: string
       sans: string
       mono: string
@@ -48,6 +48,5 @@ declare module 'styled-components' {
       '4xl': string
       '5xl': string
     }
-
   }
 }

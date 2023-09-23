@@ -1,14 +1,12 @@
-import { ReactNode } from "react";
-import { IconContext } from "@phosphor-icons/react";
+import { ReactNode } from 'react'
+import { IconContext } from '@phosphor-icons/react'
 
-
-
-export default function IconProvider({children}:{children:ReactNode}) {
+export default function IconProvider({ children }: { children: ReactNode }) {
   return (
     <IconContext.Provider
       value={{
         size: 20,
-        weight: "fill",
+        weight: 'fill',
         mirrored: false,
       }}
     >

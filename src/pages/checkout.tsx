@@ -21,9 +21,6 @@ export default function Checkout() {
   const navigate = useNavigate()
 
   const onSubmit = (data: ValidationSchemma) => {
-    console.log(methods.formState.isValid)
-    console.log(data)
-    console.log(methods.formState.errors)
     if (methods.formState.isValid) {
       navigate('/sucess', { state: { data } })
     }

@@ -1,8 +1,17 @@
 import { Trash } from '@phosphor-icons/react'
 import styled from 'styled-components'
-export default function ButtonRemove() {
+import useCart from '../hooks/useCart'
+import { removeAllProds } from '../context/cart-context/cart-reducer'
+import { Coffees } from '../types/coffees'
+export default function ButtonRemove({ item }: { item: Coffees }) {
+  const { dispatch } = useCart()
   return (
-    <ButtonStyled type="button">
+    <ButtonStyled
+      type="button"
+      onClick={() => {
+        removeAllProds(item, dispatch)
+      }}
+    >
       <Trash weight="bold" />
       <span>remover</span>
     </ButtonStyled>

@@ -6,7 +6,7 @@ import CoffeeCatalog from '../components/coffee-catalog'
 
 export default function Home() {
   return (
-    <Container>
+    <Container id='homepage'>
       <Banner>
         <ContainerText>
           <Title
@@ -21,6 +21,7 @@ export default function Home() {
         </ContainerText>
         <img src={Image} alt="" />
       </Banner>
+
       <CoffeeCatalog />
     </Container>
   )
@@ -35,23 +36,28 @@ const Subtitle = styled.p`
   line-height: 130%;
 `
 const ContainerText = styled.div`
-  width: 36.75rem;
   display: flex;
   flex-direction: column;
   gap: 12px;
 `
 
 const Container = styled.section`
-  width: 100%;
+ 
 `
 const Banner = styled.section`
-  width: 100%;
   min-height: 34rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  @media (max-width: 1150px) {
+  padding: 0 1rem;
+  max-width: 1440px;
+  > img {
+    width: 100%;
+    max-width: 500px;
+  }
+  @media (max-width: 750px) {
     justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
 `

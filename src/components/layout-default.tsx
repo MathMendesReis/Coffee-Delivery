@@ -6,6 +6,7 @@ export const LayoutDefault = styled.div`
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  width: 100%;
-  padding: 0 240px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
 `

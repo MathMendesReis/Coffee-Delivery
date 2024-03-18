@@ -49,6 +49,7 @@ const LengthCart = styled.div`
 const NavBar = styled.header`
   min-height: 6.5rem;
   width: 100%;
+  max-width: 1440px;
   padding: 32px 0;
   display: flex;
   justify-content: flex-end;

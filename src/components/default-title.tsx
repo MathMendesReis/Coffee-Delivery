@@ -20,4 +20,5 @@ const Styled = styled.h1<StyledProps>`
   font-style: normal;
   font-weight: 800;
   line-height: 130%;
+  
 `

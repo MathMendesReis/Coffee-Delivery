@@ -30,12 +30,17 @@ export default function ListIconWithInfo() {
 }
 
 const ContainerInfoWithIcon = styled.div`
-  width: 35.4375rem;
-  height: 5.25rem;
+  max-width: 35.4375rem;
+  min-height: 5.25rem;
   flex-shrink: 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 12px;
+  @media (max-width: 750px) {
+    justify-content: center;
+    margin: 0 auto;
+    text-align: start;
+  }
 `
